@@ -1,11 +1,13 @@
 package com.andressaggudelo.navigation
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.andressaggudelo.navigation.databinding.ActivityMainBinding.inflate
 import com.andressaggudelo.navigation.databinding.FragmentFirstBinding
 
@@ -15,9 +17,26 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_first, container, false)
         val binding: FragmentFirstBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)
+
+        binding.viewBalanceButton.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_firstFragment_to_viewBalanceFragment)
+        }
+        setHasOptionsMenu(true)
+
+        (activity as AppCompatActivity).supportActionBar?.show()
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        // Menus are also inflated
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item,
+            view!!.findNavController()) ||
+            super.onOptionsItemSelected(item)
     }
 }

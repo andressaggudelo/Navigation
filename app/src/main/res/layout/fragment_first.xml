@@ -9,13 +9,36 @@
         tools:context=".FirstFragment">
 
         <Button
-            android:id="@+id/next_fragment_button"
+            android:id="@+id/view_trans_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/click_me"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/view_transactions"
+            app:layout_constraintBottom_toTopOf="@+id/send_money_button"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/send_money_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_money"
+            app:layout_constraintBottom_toTopOf="@+id/view_balance_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_trans_button" />
+
+        <Button
+            android:id="@+id/view_balance_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_balance"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/send_money_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
