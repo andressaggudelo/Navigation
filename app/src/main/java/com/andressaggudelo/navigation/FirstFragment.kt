@@ -19,14 +19,27 @@ class FirstFragment : Fragment() {
     ): View? {
         val binding: FragmentFirstBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)
 
+    // Buttons to navigate through the app:
         binding.viewBalanceButton.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_firstFragment_to_viewBalanceFragment)
         }
-        setHasOptionsMenu(true)
 
+        binding.sendMoneyButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_firstFragment_to_chooseRecipientFragment2)
+        }
+
+        binding.viewTransButton.setOnClickListener { view: View->
+            view.findNavController().navigate(R.id.action_firstFragment_to_viewTransactionFragment)
+        }
+
+
+    // Setting up the OverFLow Menu:
+        setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.show()
         return binding.root
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)

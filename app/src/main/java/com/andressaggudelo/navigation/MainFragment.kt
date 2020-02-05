@@ -21,9 +21,11 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentMainBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+
         binding.goInButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_firstFragment_to_viewBalanceFragment)
+            view.findNavController().navigate(R.id.action_mainFragment_to_firstFragment)
         }
+
         (activity as AppCompatActivity).supportActionBar?.hide()
         return binding.root
     }

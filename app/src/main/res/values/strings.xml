@@ -10,4 +10,15 @@
     <string name="go_in_button">Go in</string>
     <string name="welcome_message">Holiii</string>
     <string name="about_definition">Somos de la ciudad de feria de flores, donde tomamos guaro por montones. Una tierra pujante ilusiones, en donde solo nacen campeones.</string>
+    <string name="food">Food</string>
+    <string name="data">Data</string>
+    <string name="rent">Rent</string>
+    <string name="candles">Candles</string>
+    <string name="utility">Utility</string>
+    <string name="transaction_name">Name</string>
+    <string name="recipient">Recipient</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+    <string name="amount">Amount</string>
+    <string name="transaction_successful">Transaction successful</string>
 </resources>
