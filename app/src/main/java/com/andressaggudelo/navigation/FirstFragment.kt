@@ -21,15 +21,15 @@ class FirstFragment : Fragment() {
 
     // Buttons to navigate through the app:
         binding.viewBalanceButton.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_firstFragment_to_viewBalanceFragment)
+            view.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToViewBalanceFragment())
         }
 
         binding.sendMoneyButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_firstFragment_to_chooseRecipientFragment2)
+            view.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToChooseRecipientFragment2())
         }
 
         binding.viewTransButton.setOnClickListener { view: View->
-            view.findNavController().navigate(R.id.action_firstFragment_to_viewTransactionFragment)
+            view.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToViewTransactionFragment())
         }
 
 

@@ -33,7 +33,8 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.andressaggudelo.navigation.MainFragment"
-        android:label="Welcome">
+        android:label="Welcome"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
@@ -41,11 +42,13 @@
     <fragment
         android:id="@+id/viewTransactionFragment"
         android:name="com.andressaggudelo.navigation.ViewTransactionFragment"
-        android:label="Transactions" />
+        android:label="Transactions"
+        tools:layout="@layout/fragment_view_transaction"/>
     <fragment
         android:id="@+id/specifyAmountFragment"
         android:name="com.andressaggudelo.navigation.SpecifyAmountFragment"
-        android:label="Specify Amount">
+        android:label="Specify Amount"
+        tools:layout="@layout/fragment_specify_amount">
         <action
             android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment"
@@ -55,7 +58,8 @@
     <fragment
         android:id="@+id/chooseRecipientFragment2"
         android:name="com.andressaggudelo.navigation.ChooseRecipientFragment"
-        android:label="Choose Recipient">
+        android:label="Choose Recipient"
+        tools:layout="@layout/fragment_choose_recipient">
         <action
             android:id="@+id/action_chooseRecipientFragment2_to_specifyAmountFragment"
             app:destination="@id/specifyAmountFragment" />
@@ -64,5 +68,9 @@
         android:id="@+id/confirmationFragment"
         android:name="com.andressaggudelo.navigation.ConfirmationFragment"
         android:label="Confirmation"
-        tools:layout="@layout/fragment_confirmation" />
+        tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="amount"
+            app:argType="string" />
+    </fragment>
 </navigation>

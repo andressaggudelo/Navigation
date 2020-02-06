@@ -22,7 +22,7 @@ class ChooseRecipientFragment : Fragment() {
 
         val binding: FragmentChooseRecipientBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_choose_recipient, container, false)
         binding.nextRecipient.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_chooseRecipientFragment2_to_specifyAmountFragment)
+            view.findNavController().navigate(ChooseRecipientFragmentDirections.actionChooseRecipientFragment2ToSpecifyAmountFragment())
         }
         binding.cancelRecipient.setOnClickListener { view: View ->
             view.findNavController().popBackStack()

@@ -22,11 +22,13 @@ class SpecifyAmountFragment : Fragment() {
 
         val binding: FragmentSpecifyAmountBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_specify_amount, container, false)
 
-        binding.nextAmount.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_specifyAmountFragment_to_confirmationFragment)
+        binding.nextAmount.setOnClickListener { v: View ->
+            v.findNavController().navigate(
+                SpecifyAmountFragmentDirections.actionSpecifyAmountFragmentToConfirmationFragment(binding.editText.text.toString())
+            )
         }
-        binding.cancelAmount.setOnClickListener { view: View ->
-            view.findNavController().popBackStack()
+        binding.cancelAmount.setOnClickListener { v: View ->
+            v.findNavController().popBackStack()
         }
 
         return binding.root

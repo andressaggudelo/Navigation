@@ -23,7 +23,7 @@ class MainFragment : Fragment() {
         val binding: FragmentMainBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
         binding.goInButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_mainFragment_to_firstFragment)
+            view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToFirstFragment())
         }
 
         (activity as AppCompatActivity).supportActionBar?.hide()
