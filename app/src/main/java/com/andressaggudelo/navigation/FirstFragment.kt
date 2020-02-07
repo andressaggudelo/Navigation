@@ -35,7 +35,7 @@ class FirstFragment : Fragment() {
 
     // Setting up the OverFLow Menu:
         setHasOptionsMenu(true)
-        (activity as AppCompatActivity).supportActionBar?.show()
+        //(activity as AppCompatActivity).supportActionBar?.show()
         return binding.root
     }
 

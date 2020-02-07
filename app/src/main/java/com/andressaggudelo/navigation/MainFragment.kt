@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
             view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToFirstFragment())
         }
 
-        (activity as AppCompatActivity).supportActionBar?.hide()
+        //(activity as AppCompatActivity).supportActionBar?.hide()
         return binding.root
     }
 

@@ -73,4 +73,9 @@
             android:name="amount"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.andressaggudelo.navigation.RulesFragment"
+        android:label="Rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
